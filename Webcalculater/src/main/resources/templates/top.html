@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+	<link rel="stylesheet" th:href="@{/css/top.css}">
+	<script type="text/javascript" defer th:inline="javascript">
+		// コンテキストパス
+		const contextPath = /*[[ @{/} ]]*/ '';
+	</script>
+<body>
+
+<div class="calculator">
+    <div id="display" class="display">0</div>
+
+    <div class="buttons">
+        <button onclick="onClear()">C</button>
+		<button onclick="onBackspace()">←</button>
+        <button onclick="onOperator('/')">/</button>
+        <button onclick="onOperator('*')">*</button>
+        <button onclick="onOperator('-')">-</button>
+
+        <button onclick="onDigit('7')">7</button>
+        <button onclick="onDigit('8')">8</button>
+        <button onclick="onDigit('9')">9</button>
+        <button onclick="onOperator('+')">+</button>
+
+        <button onclick="onDigit('4')">4</button>
+        <button onclick="onDigit('5')">5</button>
+        <button onclick="onDigit('6')">6</button>
+        <button onclick="onEqual()">=</button>
+
+        <button onclick="onDigit('1')">1</button>
+        <button onclick="onDigit('2')">2</button>
+        <button onclick="onDigit('3')">3</button>
+
+        <button class="zero" onclick="onDigit('0')">0</button>
+        <button onclick="onDot()">.</button>
+        <button onclick="onSignToggle()">±</button>
+    </div>
+</div>
+
+<script th:src="@{/js/top.js}"></script></head>
+</body>
+</html>
